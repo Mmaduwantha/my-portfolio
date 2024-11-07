@@ -123,15 +123,16 @@ section{
 }
 
 .main-container .image{
-    width: 500px;
-    height: 80vh;
-    border-radius: 100%;
+    width: 400px;
+    height: 55vh;
+    border-radius: 150%;
     overflow: hidden;
     box-shadow: 0 0 50px #077b32;
 }
 
 .main-container .image img{
     width: 100%;
+    
 }
 
 .main-container .image:hover{
@@ -160,11 +161,6 @@ section{
 
 .content h1{
     font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
-}
-
-.content h1 span{
-    color: #077b32;
-    text-shadow: 0  0 10px #077b32;
 }
 
 .content .typewriter{
@@ -268,8 +264,8 @@ section{
 
 @media (max-width:440px){
     .main-container .image{
-        width: 50%;
-        height: 60%;
+        width: 40%;
+        height: 50%;
         margin-bottom: 0px;
     }
 
@@ -280,4 +276,8 @@ section{
     .main-container button{
         margin-top: 15px;
     }
+}
+
+.h1{
+    color: aliceblue;
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const texts = ["DEVELOPER", "YOUTUBER"];
+const texts = ["BACK END DEVELOPER", "FRONT END DEVELOPER"];
 
 function Typewriter() {
   const [text, setText] = useState('');

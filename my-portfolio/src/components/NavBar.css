@@ -1,0 +1,28 @@
+/* NavBar.css */
+nav {
+    /* Add your navigation styles */
+  }
+  
+  nav .links a, .dropdown a {
+    text-decoration: none;
+    color: black; /* Default link color */
+    font-weight: normal;
+  }
+  
+  nav .links a.active-link, .dropdown a.active-link {
+    color: green; /* Active link color */
+    font-weight: bold;
+  }
+  
+  .hamburg {
+    /* Styles for hamburger icon */
+  }
+  
+  .dropdown {
+    /* Styles for dropdown */
+  }
+  
+  .dropdown a {
+    /* Styles for links in dropdown */
+  }
+  
