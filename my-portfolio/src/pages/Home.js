@@ -24,9 +24,11 @@ function Home() {
           Backend-focused Full-Stack Developer passionate about building scalable, efficient applications. Skilled in Node.js, Express, MongoDB, and MySQL, with strong front-end and design abilities in HTML, CSS, JavaScript, and Adobe Creative Suite. Committed to creating seamless, user-centered experiences that blend functionality with visual appeal
           </p>
           <SocialLinks />
+          <a href='http://localhost:3000/Contact'>
           <button className="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
             Hire me
           </button>
+          </a>
         
         </div>
       </div>
