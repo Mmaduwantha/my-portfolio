@@ -1,8 +1,13 @@
 import React from "react";
 
 function Skill(){
-    return
-    <h1>shgshgsh</h1>
+    return(
+        <div>
+            <h1>
+                hi
+            </h1>
+        </div>
+    );
 }
 
 export default Skill;
