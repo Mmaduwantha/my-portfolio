@@ -46,7 +46,7 @@
   
   .contact-form textarea {
     height: 150px;
-    width: 534px;
+    width: 570px;
     resize: none;
   }
   
@@ -177,4 +177,73 @@
 
 .read-more-btn:hover {
   background-color: #36dd52;
+}
+/* for skill */
+
+.skills-section {
+  padding: 10px 180px;
+  background-color: #000000;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.skills-section h2 span {
+  color: #23ac04;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 50px;
+}
+
+.skill-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 300px;
+  height: 150px;
+  box-shadow: 0 0 50px rgba(7, 208, 4, 0.3);
+  transition: transform 0.3s ease;
+  
+}
+
+.skill-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+  transform: scale(1.1);
+}
+
+.skill-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  text-align: center;
+}
+
+.skill-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1bd121;
+}
+
+.skill-info p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: #ffffff;
 }

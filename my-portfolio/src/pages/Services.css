@@ -25,8 +25,9 @@
   .service-card {
     background-color: #0e401d;
     padding: 20px;
-    border-radius: 8px;
-    width: 250px;
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
     box-shadow: 0 0 10px #00ff62;
     text-align: center;
     transition: transform 0.3s ease;
