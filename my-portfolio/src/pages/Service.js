@@ -7,7 +7,7 @@ function Services() {
     <div>
         <Navbar />
     <section className="services-section">
-      <h2>Our <span>Services</span></h2>
+      <h2><span>Services</span></h2>
       <div className="services-container">
         <div className="service-card">
           <div className="service-icon">💻</div>
