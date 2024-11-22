@@ -39,7 +39,7 @@ function Skill() {
           </div>
         </div>
         <div className="skill-card">
-          <img src="https://play-lh.googleusercontent.com/lxs94X55uyK1gK7ZdbPi36QHuGQP_rbOYqOKXivsEoC7Y1Hs6KoAzqoCeWlCDqc=w526-h296-rw" alt="Database Management" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNhyI0_MWa8Wxu4tKSWlViBlJNlmz3HVcxDQ&s" alt="Database Management" />
           <div className="skill-info">
             <a href='https://github.com/Mmaduwantha/WallpaperChangerApp.git'>
             <h3>Wallpaper Changer App</h3>
