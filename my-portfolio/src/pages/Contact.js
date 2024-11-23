@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Navbar from "../components/Navbar";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef();
+
+  // State to manage form data
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,35 +14,36 @@ function Contact() {
     message: "",
   });
 
-  const [statusMessage, setStatusMessage] = useState("");
-
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  // Send email and reset form
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:5000/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+    emailjs
+      .sendForm("service_sikowjd", "template_lhywob1", form.current, {
+        publicKey: "Q1KuEWV5ff3sZjg3O",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          // Reset form fields after success
+          setFormData({
+            name: "",
+            email: "",
+            mobile: "",
+            subject: "",
+            message: "",
+          });
         },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-      if (data.success) {
-        setStatusMessage("Message sent successfully!");
-        setFormData({ name: "", email: "", mobile: "", subject: "", message: "" });
-      } else {
-        setStatusMessage("Failed to send the message. Please try again.");
-      }
-    } catch (error) {
-      setStatusMessage("An error occurred. Please try again later.");
-    }
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
@@ -48,7 +53,7 @@ function Contact() {
         <h1>
           Contact<span>Me</span>
         </h1>
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
           <div className="form-row">
             <input
               type="text"
@@ -97,7 +102,6 @@ function Contact() {
           ></textarea>
           <button type="submit">Send Message</button>
         </form>
-        {statusMessage && <p className="status-message">{statusMessage}</p>}
       </div>
     </div>
   );
