@@ -14,27 +14,30 @@ app.post("/send-email", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "matheeshasamith@gmail.com", // Replace with your email
-      pass: "1122", // Replace with your email password or app password
+      user: "mrcyruswife@gmail.com", // Replace with your email
+      pass: "Pramudi2003", // Replace with your email password or app password
     },
   });
 
   const mailOptions = {
-    from: email,
-    to: "matheeshasamith@gmail.com", // Replace with your email
-    subject: `Contact Form Submission: ${subject}`,
-    text: `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}`,
-  };
+    from: "mrcyruswife@gmail.com",
+    to: req.body.email, // Email entered in the form
+    subject: req.body.subject, // Subject from the form
+    text: req.body.message, // Message from the form
+};
 
-  transporter.sendMail(mailOptions, (error, info) => {
+transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error(error);
-      res.status(500).json({ success: false, message: "Email not sent" });
+        console.error("Error:", error); // Log error for debugging
+        res.status(500).json({ success: false, message: "Failed to send the message. Please try again" });
     } else {
-      res.status(200).json({ success: true, message: "Email sent successfully" });
+        console.log("Email sent:", info.response);
+        res.status(200).json({ success: true, message: "Email sent successfully!" });
     }
-  });
 });
+
+  });
+
 
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
