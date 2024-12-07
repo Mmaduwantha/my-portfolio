@@ -7,7 +7,7 @@ function Navbar() {
     <nav>
       <div className="nav-container">
         <div className="logo" data-aos="zoom-in" data-aos-duration="1500">
-         Mr Matheesha
+        Matheesha Maduwantha
         </div>
         <div className="links">
           <a href="/Home">Home</a>
